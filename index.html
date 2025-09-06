@@ -1,63 +1,133 @@
-<!--
-Filename: کارت-ویزیت-دیجیتالی.html
-Usage: این فایل HTML یک کارت ویزیت دیجیتال (فارسی، راست‌به‌چپ) است که می‌توانید مستقیم در GitHub Pages آپلود کنید.
-لوگوی شما (Gemini_Generated_Image_ewcxlzewcxlzewcx.png) در کارت ویزیت نمایش داده می‌شود.
--->
-
-<!doctype html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html>
+<html lang="fa">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>کارت ویزیت دیجیتال — احمدی</title>
-  <style>
-    :root{
-      --bg:#0f1724;
-      --card:#0b1220;
-      --accent:#06b6d4;
-      --muted:#94a3b8;
-      --glass: rgba(255,255,255,0.04);
-      font-family: "Vazirmatn", "Tahoma", "Segoe UI", Arial, sans-serif;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>کارت ویزیت دیجیتال بانی‌پال</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+    body {
+        margin: 0;
+        font-family: 'Vazirmatn', sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:linear-gradient(180deg,var(--bg) 0%, #06202b 100%);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-      color:#e6eef6;
+
+    .business-card {
+        width: 360px;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        color: #fff;
+        padding: 20px;
+        text-align: right;
+        position: relative;
     }
-    .card{
-      width:100%;
-      max-width:920px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      border-radius:14px;
-      box-shadow:0 10px 30px rgba(2,6,23,0.7);
-      padding:28px;
-      display:grid;
-      grid-template-columns: 260px 1fr;
-      gap:22px;
-      align-items:center;
-      backdrop-filter: blur(6px);
-      border:1px solid rgba(255,255,255,0.03);
+
+    /* افکت پس‌زمینه شبکه */
+    .business-card::before {
+        content: "";
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: url('https://i.imgur.com/4bKZq1J.png') center/cover no-repeat;
+        opacity: 0.15;
+        z-index:0;
     }
-    .brand{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
-    .logo-wrap{width:180px;height:180px;border-radius:16px;background:linear-gradient(135deg,var(--glass), rgba(255,255,255,0.02));display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.04);overflow:hidden}
-    .logo-wrap img{width:100%;height:100%;object-fit:cover}
-    .logo-fallback{display:none}
-    h1{margin:0;font-size:22px}
-    .role{color:var(--muted);font-size:14px;margin-top:6px}
-    .info{padding:18px 20px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.02)}
-    .services{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
-    .service-item{display:flex;align-items:center;gap:12px}
-    .service-item svg{width:22px;height:22px;flex-shrink:0;opacity:0.9}
-    .service-text{font-size:15px}
-    .contact{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:12px;flex-wrap:wrap}
-    .phone{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);font-weight:700;font-size:16px}
-    .meta{color:var(--muted);font-size:13px}
-    .actions{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);cursor:pointer;text-decoration:none;color:inherit}
-    .btn .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        position: relative;
+        z-index:1;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        margin-left: 15px;
+        border: 2px solid #00adb5;
+    }
+
+    .logo h1 {
+        font-size: 26px;
+        margin: 0;
+        color: #00fff0;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .services {
+        margin: 15px 0;
+        line-height: 1.7;
+        font-size: 16px;
+        position: relative;
+        z-index:1;
+    }
+
+    .contact {
+        background: rgba(0, 173, 181, 0.2);
+        padding: 12px;
+        border-radius: 12px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 15px;
+        position: relative;
+        z-index:1;
+    }
+
+    .contact span {
+        display: block;
+        font-size: 16px;
+    }
+
+    @media (max-width: 400px) {
+        .business-card {
+            width: 90%;
+            padding: 15px;
+        }
+
+        .logo h1 {
+            font-size: 22px;
+        }
+
+        .services {
+            font-size: 14px;
+        }
+
+        .contact span {
+            font-size: 14px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="business-card">
+        <div class="logo">
+            <img src="logo.png" alt="لوگو بانی‌پال">
+            <h1>BaniPal</h1>
+        </div>
+        <div class="services">
+            طراحی سایت<br>
+            طراحی لوگو و کارت ویزیت<br>
+            عیب‌یابی و ارتقا سیستم‌های کامپیوتری<br>
+            نصب دوربین و دزدگیر و سیستم‌های حفاظتی<br>
+            انتقال تصویر
+        </div>
+        <div class="contact">
+            <span>احمدی</span>
+            <span>09125448053</span>
+        </div>
+    </div>
+</body>
+</html>
+
